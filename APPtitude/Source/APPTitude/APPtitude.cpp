@@ -4,16 +4,19 @@
 
 bool APPtitudeApp::Init(HINSTANCE const instanceHandle, int const cmdShow)
 {
-    s_instanceHandle = instanceHandle;
-    s_mainWindowHandle = new Window(L"", m_appTitle.c_str());
+    _ASSERT(!s_instance);
+    s_instance = this;
 
-    if (!s_mainWindowHandle)
+    m_instanceHandle = instanceHandle;
+    m_mainWindowHandle = new Window(L"", m_appTitle.c_str());
+
+    if (!m_mainWindowHandle)
     {
         return false;
     }
 
-    ShowWindow(s_mainWindowHandle->GetHandle(), cmdShow);
-    UpdateWindow(s_mainWindowHandle->GetHandle());
+    ShowWindow(m_mainWindowHandle->GetHandle(), cmdShow);
+    UpdateWindow(m_mainWindowHandle->GetHandle());
     return true;
 }
 
@@ -26,61 +29,6 @@ int APPtitudeApp::Run()
         DispatchMessage(&msg);
     }
     return (int)msg.wParam;
-}
-
-
-#define MAX_LOADSTRING 100
-
-// Global Variables:
-HINSTANCE hInst;                                // current instance
-WCHAR szTitle[MAX_LOADSTRING];                  // The title bar text
-WCHAR szWindowClass[MAX_LOADSTRING];            // the main window class name
-
-// Forward declarations of functions included in this code module:
-ATOM                MyRegisterClass(HINSTANCE hInstance);
-BOOL                InitInstance(HINSTANCE, int);
-LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
-INT_PTR CALLBACK    About(HWND, UINT, WPARAM, LPARAM);
-
-//
-//  FUNCTION: MyRegisterClass()
-//
-//  PURPOSE: Registers the window class.
-//
-ATOM MyRegisterClass(HINSTANCE hInstance)
-{
-    WNDCLASSEXW wcex;
-
-    wcex.cbSize = sizeof(WNDCLASSEX);
-
-    wcex.style          = CS_HREDRAW | CS_VREDRAW;
-    wcex.lpfnWndProc    = WndProc;
-    wcex.cbClsExtra     = 0;
-    wcex.cbWndExtra     = 0;
-    wcex.hInstance      = hInstance;
-    wcex.hIcon          = LoadIcon(hInstance, MAKEINTRESOURCE(ID_APP_ICON));
-    wcex.hCursor        = LoadCursor(nullptr, IDC_ARROW);
-    wcex.hbrBackground  = (HBRUSH)(COLOR_WINDOW+1);
-    wcex.lpszMenuName   = MAKEINTRESOURCEW(IDC_APPTITUDE);
-    wcex.lpszClassName  = szWindowClass;
-    wcex.hIconSm        = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(ID_APP_ICON));
-
-    return RegisterClassExW(&wcex);
-}
-
-//
-//   FUNCTION: InitInstance(HINSTANCE, int)
-//
-//   PURPOSE: Saves instance handle and creates main window
-//
-//   COMMENTS:
-//
-//        In this function, we save the instance handle in a global variable and
-//        create and display the main program window.
-//
-BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
-{
-   
 }
 
 //
