@@ -5,8 +5,8 @@
 class ChildWindow : public Window
 {
 public:
-    ChildWindow(LPCWSTR windowClass, LPCWSTR windowTitle, HWND parentWindowHandle);
+    ChildWindow(LPCWSTR windowClass, LPCWSTR windowTitle, Window* parentWindow);
 
 private:
-    HWND m_parentWindowHandle;
+    Window* m_parentWindow;
 };

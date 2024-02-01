@@ -4,13 +4,13 @@
 
 #include <string>
 
-class Window;
+class MainWindow;
 
 class APPtitudeApp
 {
 public:
     static HINSTANCE GetInstanceHandle() { return s_instance->m_instanceHandle; }
-    static Window& GetMainWindowHandle() { return *s_instance->m_mainWindowHandle; }
+    static MainWindow& GetMainWindow() { return *s_instance->m_mainWindow; }
 
     static std::wstring const& GetMainWindowTitle() { return s_instance->m_appTitle; }
 
@@ -24,8 +24,10 @@ public:
 
 private:
     HINSTANCE m_instanceHandle;
-    Window* m_mainWindowHandle;
+    MainWindow* m_mainWindow;
 
 protected:
     std::wstring m_appTitle;
+    WNDPROC m_mainWindowCallback;
+    HBRUSH m_mainWindowBrush;
 };

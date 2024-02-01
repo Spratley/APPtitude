@@ -5,10 +5,10 @@
 class Window
 {
 public:
-    Window(LPCWSTR windowClass, LPCWSTR windowTitle);
+    bool const IsValid() const { return m_windowHandle; }
 
     HWND GetHandle() const { return m_windowHandle; }
 
-private:
+protected:
     HWND m_windowHandle;
 };

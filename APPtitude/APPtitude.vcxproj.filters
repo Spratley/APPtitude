@@ -7,35 +7,76 @@
     <Filter Include="Source\APPTitude">
       <UniqueIdentifier>{7aeaa859-23b0-4dab-b5e9-317de336b369}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\APPTitude\Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Source\APPTitude\Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="Source\Demo App">
       <UniqueIdentifier>{b4bfd9b5-f9a6-444d-a1af-1bfb02fdf544}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\APPTitude\Win32">
+      <UniqueIdentifier>{8c982905-3662-42ee-bf02-9adf213012f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{e045b094-5f81-4846-afd5-6b81c79648f6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="APPtitude.h">
-      <Filter>Source\APPTitude\Header Files</Filter>
+    <ClInclude Include="Source\Demo App\DemoApp.h">
+      <Filter>Source\Demo App</Filter>
     </ClInclude>
-    <ClInclude Include="StandardIncludes.h">
-      <Filter>Source\APPTitude\Header Files</Filter>
+    <ClInclude Include="Source\APPTitude\Win32\Win32Helper.h">
+      <Filter>Source\APPTitude\Win32</Filter>
     </ClInclude>
-    <ClInclude Include="AppDefines.h">
-      <Filter>Source\APPTitude\Header Files</Filter>
+    <ClInclude Include="Source\APPTitude\AppDefines.h">
+      <Filter>Source\APPTitude</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\APPTitude\APPtitude.h">
+      <Filter>Source\APPTitude</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\APPTitude\StandardIncludes.h">
+      <Filter>Source\APPTitude</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\APPTitude\Win32\Window.h">
+      <Filter>Source\APPTitude\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\APPTitude\Win32\ChildWindow.h">
+      <Filter>Source\APPTitude\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\APPTitude\Win32\MainWindow.h">
+      <Filter>Source\APPTitude\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\APPTitude\Win32\Win32Defines.h">
+      <Filter>Source\APPTitude\Win32</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="APPtitude.cpp">
-      <Filter>Source\APPTitude\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AppMain.cpp">
+    <ClCompile Include="Source\AppMain.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Demo App\DemoApp.cpp">
+      <Filter>Source\Demo App</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\APPTitude\Win32\Win32Helper.cpp">
+      <Filter>Source\APPTitude\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\APPTitude\APPtitude.cpp">
+      <Filter>Source\APPTitude</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\APPTitude\Win32\ChildWindow.cpp">
+      <Filter>Source\APPTitude\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\APPTitude\Win32\MainWindow.cpp">
+      <Filter>Source\APPTitude\Win32</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="APPtitude.rc">
+      <Filter>Resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="app.ico">
+      <Filter>Resources</Filter>
+    </Image>
   </ItemGroup>
 </Project>
