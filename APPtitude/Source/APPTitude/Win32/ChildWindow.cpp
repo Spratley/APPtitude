@@ -2,8 +2,11 @@
 
 #include "Win32Helper.h"
 
-ChildWindow::ChildWindow(LPCWSTR windowClass, LPCWSTR windowTitle, Window* parentWindow)
+ChildWindow::ChildWindow(Window* parentWindow)
 : m_parentWindow(parentWindow)
+{ }
+
+void ChildWindow::InitWindow(LPCWSTR windowClass, LPCWSTR windowTitle)
 {
-    // Create the window...
+    m_windowHandle = Win32Helper::CreateChildWindow(windowClass, windowTitle, GetWindowStyle(), m_parentWindow->GetHandle());
 }
