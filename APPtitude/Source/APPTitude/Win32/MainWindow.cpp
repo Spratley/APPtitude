@@ -4,5 +4,5 @@
 
 MainWindow::MainWindow(LPCWSTR windowClass, LPCWSTR windowTitle)
 {
-    Win32Helper::CreateMainWindow(windowClass, windowTitle);
+    m_windowHandle = Win32Helper::CreateMainWindow(windowClass, windowTitle);
 }

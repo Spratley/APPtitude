@@ -6,12 +6,12 @@
 
 HWND Win32Helper::CreateWindowGeneric(LPCWSTR const className, LPCWSTR const title, DWORD const style, HWND const parentHandle, int const posX, int const posY, int const width, int const height)
 {
-    return CreateWindowW(className, title, style, posX, posY, width, height, parentHandle, NULL, APPtitudeApp::GetInstanceHandle(), NULL);
+    return CreateWindow(className, title, style, posX, posY, width, height, parentHandle, NULL, APPtitudeApp::GetInstanceHandle(), NULL);
 }
 
 HWND Win32Helper::CreateMainWindow(LPCWSTR const className, LPCWSTR const title)
 {
-    return CreateWindowGeneric(className, title, WS_OVERLAPPEDWINDOW, nullptr, CW_USEDEFAULT, CW_USEDEFAULT);
+    return CreateWindowGeneric(className, title, WS_OVERLAPPEDWINDOW, nullptr, CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT);
 }
 
 HWND Win32Helper::CreateChildWindow(LPCWSTR const className, LPCWSTR const title, DWORD const style, HWND const parentHandle, int const posX, int const posY, int const width, int const height)
