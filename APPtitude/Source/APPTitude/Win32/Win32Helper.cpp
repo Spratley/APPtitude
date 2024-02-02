@@ -33,7 +33,7 @@ ATOM Win32Helper::RegisterWindowClass(LPCWSTR const className, UINT const style,
     windowClass.hIcon = LoadIcon(instanceHandle, MAKEINTRESOURCE(ID_APP_ICON));
     windowClass.hCursor = LoadCursor(nullptr, IDC_ARROW);
     windowClass.hbrBackground = backgroundBrush;
-    windowClass.lpszMenuName = APPtitudeApp::GetMainWindowTitle().c_str();
+    windowClass.lpszMenuName = NULL;
     windowClass.lpszClassName = className;
     windowClass.hIconSm = LoadIcon(instanceHandle, MAKEINTRESOURCE(ID_APP_ICON));
 

@@ -4,6 +4,8 @@
 #include "Win32/Win32Helper.h"
 #include <strsafe.h>
 
+#include "Win32/Menubar/Menubar.h"
+
 APPtitudeApp* APPtitudeApp::s_instance = nullptr;
 
 bool APPtitudeApp::Init(HINSTANCE const instanceHandle, int const cmdShow)
@@ -19,6 +21,11 @@ bool APPtitudeApp::Init(HINSTANCE const instanceHandle, int const cmdShow)
 
     ShowWindow(m_mainWindow->GetHandle(), cmdShow);
     UpdateWindow(m_mainWindow->GetHandle());
+
+    Menubar* menubar = m_mainWindow->InitMenu();
+    menubar->InsertItem(L"File", L"Poop", 69);
+    menubar->InvalidateMenuBar();
+
     return true;
 }
 

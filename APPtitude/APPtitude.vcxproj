@@ -155,20 +155,31 @@
     <ClInclude Include="Source\APPTitude\AppDefines.h" />
     <ClInclude Include="Source\APPTitude\APPtitude.h" />
     <ClInclude Include="Source\APPTitude\StandardIncludes.h" />
+    <ClInclude Include="Source\APPTitude\StringConvert.h" />
     <ClInclude Include="Source\APPTitude\Win32\ChildWindow.h" />
     <ClInclude Include="Source\APPTitude\Win32\MainWindow.h" />
+    <ClInclude Include="Source\APPTitude\Win32\Menubar\Menubar.h" />
     <ClInclude Include="Source\APPTitude\Win32\Win32Defines.h" />
     <ClInclude Include="Source\APPTitude\Win32\Win32Helper.h" />
     <ClInclude Include="Source\APPTitude\Win32\Window.h" />
+    <ClInclude Include="Source\APPTitude\Win32\Windows\DocumentViewWindow.h" />
+    <ClInclude Include="Source\APPTitude\Win32\Windows\JSONDocumentViewWindow.h" />
     <ClInclude Include="Source\Demo App\DemoApp.h" />
+    <ClInclude Include="Source\JParse\JParse.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\AppMain.cpp" />
     <ClCompile Include="Source\APPTitude\APPtitude.cpp" />
+    <ClCompile Include="Source\APPTitude\StringConvert.cpp" />
     <ClCompile Include="Source\APPTitude\Win32\ChildWindow.cpp" />
     <ClCompile Include="Source\APPTitude\Win32\MainWindow.cpp" />
+    <ClCompile Include="Source\APPTitude\Win32\Menubar\Menubar.cpp" />
     <ClCompile Include="Source\APPTitude\Win32\Win32Helper.cpp" />
+    <ClCompile Include="Source\APPTitude\Win32\Window.cpp" />
+    <ClCompile Include="Source\APPTitude\Win32\Windows\DocumentViewWindow.cpp" />
+    <ClCompile Include="Source\APPTitude\Win32\Windows\JSONDocumentViewWindow.cpp" />
     <ClCompile Include="Source\Demo App\DemoApp.cpp" />
+    <ClCompile Include="Source\JParse\JParse.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="APPtitude.rc" />

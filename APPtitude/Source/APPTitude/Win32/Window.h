@@ -15,6 +15,8 @@ public:
     POINT const& GetPos() const { return m_pos; }
     POINT const& GetSize() const { return m_size; }
 
+    void InvalidatePaintArea() const;
+
 protected:
     HWND m_windowHandle;
 

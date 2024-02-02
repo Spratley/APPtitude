@@ -16,6 +16,15 @@
     <Filter Include="Resources">
       <UniqueIdentifier>{e045b094-5f81-4846-afd5-6b81c79648f6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\APPTitude\Win32\Windows">
+      <UniqueIdentifier>{25b7d600-a34c-4ee9-807b-3a28a619f079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\JParse">
+      <UniqueIdentifier>{7cc4e606-7a09-4369-857c-0cea32b162ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\APPTitude\Win32\Menubar">
+      <UniqueIdentifier>{39865ec8-b668-4179-a158-ee1f9c9c2459}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Demo App\DemoApp.h">
@@ -48,6 +57,21 @@
     <ClInclude Include="Source\APPTitude\Win32\Win32Defines.h">
       <Filter>Source\APPTitude\Win32</Filter>
     </ClInclude>
+    <ClInclude Include="Source\APPTitude\Win32\Windows\DocumentViewWindow.h">
+      <Filter>Source\APPTitude\Win32\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\JParse\JParse.h">
+      <Filter>Source\JParse</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\APPTitude\Win32\Windows\JSONDocumentViewWindow.h">
+      <Filter>Source\APPTitude\Win32\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\APPTitude\StringConvert.h">
+      <Filter>Source\APPTitude</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\APPTitude\Win32\Menubar\Menubar.h">
+      <Filter>Source\APPTitude\Win32\Menubar</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\AppMain.cpp">
@@ -68,6 +92,22 @@
     <ClCompile Include="Source\APPTitude\Win32\MainWindow.cpp">
       <Filter>Source\APPTitude\Win32</Filter>
     </ClCompile>
+    <ClCompile Include="Source\JParse\JParse.cpp">
+      <Filter>Source\JParse</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\APPTitude\Win32\Window.cpp">
+      <Filter>Source\APPTitude\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\APPTitude\Win32\Windows\DocumentViewWindow.cpp">
+      <Filter>Source\APPTitude\Win32\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\APPTitude\Win32\Windows\JSONDocumentViewWindow.cpp">
+      <Filter>Source\APPTitude\Win32\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\APPTitude\StringConvert.cpp">
+      <Filter>Source\APPTitude</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\APPTitude\Win32\Menubar\Menubar.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="APPtitude.rc">
