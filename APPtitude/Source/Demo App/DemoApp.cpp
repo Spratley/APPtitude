@@ -4,6 +4,9 @@ LRESULT DemoApp::MainWindowCallbackHandler(WIN32_CALLBACK_PARAMS)
 {
     switch (message)
     {
+    case WM_CREATE:
+        // Lol I pushed this to keep my streak
+        break;
     }
 
     return DefWindowProc(hWnd, message, wParam, lParam);
