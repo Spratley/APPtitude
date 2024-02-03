@@ -11,7 +11,7 @@ public:
 
     Menubar* const InitMenu();
     Menubar* const GetMenu() const { return m_menu; }
-    void DeleteMenu() { /* IMPEMENT ME */ }
+    void DeleteMenu() { /* TODO: IMPEMENT ME */ }
 
 private:
     Menubar* m_menu = nullptr;

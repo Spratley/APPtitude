@@ -9,8 +9,14 @@ Menubar::Menubar(HWND ownerHandle)
 
 void Menubar::InsertItem(std::wstring const & parentPopout, std::wstring const & itemName, UINT const identifier)
 {
-    CreatePopout(parentPopout);
-    AppendMenu(m_menuContents[parentPopout].m_menuHandle, MF_STRING, identifier, itemName.c_str());
+    HMENU popout = GetOrCreatePopout(parentPopout);
+    AppendMenu(popout, MF_STRING, identifier, itemName.c_str());
+}
+
+void Menubar::InsertBreak(std::wstring const & parentPopout)
+{
+    HMENU popout = GetOrCreatePopout(parentPopout);
+    AppendMenu(popout, MF_SEPARATOR, 0, L"");
 }
 
 void Menubar::InvalidateMenuBar()
@@ -18,7 +24,7 @@ void Menubar::InvalidateMenuBar()
     DrawMenuBar(m_owner);
 }
 
-void Menubar::CreatePopout(std::wstring const & name)
+HMENU Menubar::GetOrCreatePopout(std::wstring const & name)
 {
     if (m_menuContents.count(name) == 0)
     {
@@ -28,4 +34,6 @@ void Menubar::CreatePopout(std::wstring const & name)
         AppendMenu(m_menuHandle, MF_STRING | MF_POPUP, (UINT)popout.m_menuHandle, name.c_str());
         m_menuContents[name] = popout;
     }
+
+    return m_menuContents[name].m_menuHandle;
 }

@@ -23,14 +23,15 @@ public:
     Menubar(HWND ownerHandle);
 
     void InsertItem(std::wstring const& parentPopout, std::wstring const& itemName, UINT const identifier);
+    void InsertBreak(std::wstring const& parentPopout);
     void InvalidateMenuBar();
 
 private:
-    void CreatePopout(std::wstring const& name);
+    HMENU GetOrCreatePopout(std::wstring const& name);
 
 private:
     HWND m_owner = NULL;
 
     HMENU m_menuHandle = NULL;
-    std::unordered_map<std::wstring, MenuPopout> m_menuContents;
+    std::unordered_map<std::wstring, MenuPopout> m_menuContents; // TODO: Actually use this member
 };

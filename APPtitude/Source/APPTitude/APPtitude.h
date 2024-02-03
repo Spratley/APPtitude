@@ -5,6 +5,7 @@
 #include <string>
 
 class MainWindow;
+class Menubar;
 
 class APPtitudeApp
 {
@@ -22,11 +23,12 @@ public:
 
     int Run();
 
-private:
+    Menubar* const GetMainWindowMenu() const;
+
+protected:
     HINSTANCE m_instanceHandle;
     MainWindow* m_mainWindow;
 
-protected:
     std::wstring m_appTitle;
     WNDPROC m_mainWindowCallback;
     HBRUSH m_mainWindowBrush;
