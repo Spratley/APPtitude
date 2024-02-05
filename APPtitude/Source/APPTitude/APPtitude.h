@@ -2,6 +2,9 @@
 
 #include "StandardIncludes.h"
 
+#include "Win32/Window.h"
+#include "Win32/Win32Helper.h"
+
 #include <string>
 
 class MainWindow;
@@ -26,6 +29,13 @@ public:
     Menubar* const GetMainWindowMenu() const;
 
 protected:
+    virtual void RegisterWindowClasses();
+
+private:
+    template<typename T>
+    void RegisterWindowClass() const;
+
+protected:
     HINSTANCE m_instanceHandle;
     MainWindow* m_mainWindow;
 
@@ -33,3 +43,11 @@ protected:
     WNDPROC m_mainWindowCallback;
     HBRUSH m_mainWindowBrush;
 };
+
+template<typename T>
+inline void APPtitudeApp::RegisterWindowClass() const
+{
+    WindowClassData const windowClass = T::GetWindowClassData();
+    Win32Helper::RegisterWindowClass(windowClass.className, windowClass.style, windowClass.callbackHandler, windowClass.backgroundBrush);
+    T::s_windowClassName = std::wstring(windowClass.className);
+}

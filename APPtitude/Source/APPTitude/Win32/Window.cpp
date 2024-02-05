@@ -3,12 +3,6 @@
 
 #define MAX_WINDOW_TITLE_LENGTH 100
 
-ChildWindow* Window::CreateChild() const
-{
-    // TODO: Track children?
-    ChildWindow::CreateNewWindow(m_windowHandle, )
-}
-
 void Window::SetPosition(POINT pos)
 {
     m_pos = pos;

@@ -4,6 +4,9 @@
 #include "Win32/Win32Helper.h"
 #include <strsafe.h>
 
+// Window class registry list
+#include "Win32/Windows/JSONDocumentViewWindow.h"
+
 APPtitudeApp* APPtitudeApp::s_instance = nullptr;
 
 bool APPtitudeApp::Init(HINSTANCE const instanceHandle, int const cmdShow)
@@ -36,4 +39,9 @@ int APPtitudeApp::Run()
 Menubar * const APPtitudeApp::GetMainWindowMenu() const
 {
     return m_mainWindow->InitMenu();
+}
+
+void APPtitudeApp::RegisterWindowClasses()
+{
+    RegisterWindowClass<JSONDocumentViewWindow>();
 }
