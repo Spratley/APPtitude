@@ -40,7 +40,7 @@ bool DemoApp::Init(HINSTANCE const instanceHandle, int const cmdShow)
     menubar->InvalidateMenuBar();
     
 
-
+    // Init initial app layout
 
     return true;
 }
